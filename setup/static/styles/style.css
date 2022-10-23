@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .main-form {
@@ -16,7 +19,6 @@
 .left-form {
     width: 50vw;
     height: 100vh;
-    background-color: #121111;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,8 +56,54 @@
 }
 
 .textfield {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    margin: 10px;
 }
+
+.textfield input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #514869;
+    color: #F0FFFFDE;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+
+}
+
+.textfield label {
+    color: #F0FFFFDE;
+    margin-bottom: 10px;
+}
+
+.textfield input::placeholder {
+    color: #F0FFFF94;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #2b134b;
+    background-color: #00FF88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+
+}
+
+/* 
+#A3A3D2 e #6380B3
+#546D99 e #6989BF
+*/
