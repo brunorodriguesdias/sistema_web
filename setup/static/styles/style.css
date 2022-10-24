@@ -23,11 +23,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .left-form h1 {
+    font-size: 3vw;
     color: #77FFC0;
+}
+
+.left-form-image {
+    width: 35vw;
 }
 
 .right-form {
@@ -39,7 +43,7 @@
 }
 
 .card-form {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +78,6 @@
     font-size: 12pt;
     box-shadow: 0px 10px 40px #00000056;
     outline: none;
-
 }
 
 .textfield label {
@@ -100,10 +103,39 @@
     background-color: #00FF88;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
-
 }
 
-/* 
-#A3A3D2 e #6380B3
-#546D99 e #6989BF
-*/
+@media only screen and (max-with: 950px) {
+    .card-form {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-form {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-form h1 {
+        display: none;
+        height: auto;
+    }
+
+    .left-form {
+        width: 100%;
+        height: auto;
+    }
+
+    .right-form {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-form-image {
+        width: 50vw;
+    }
+
+    .card-form {
+        width: 90%;
+    }
+}
