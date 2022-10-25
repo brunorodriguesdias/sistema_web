@@ -1,12 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Davi Kennedy & Bruno Rodrigues">
+    <title>Projeto em dupla</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/styles/style.css' %}">
 </head>
 <body>
-    <h1>LOGIN</h1>
+    <div class="main-form">
+        <div class="left-form">
+            <h1>Realize aqui o seu login</h1>
+            <img src="{% static '/images/login-animate.svg' %}" class= "left-form-image" alt="Login Animação">
+        </div>
+        <div class="right-form">
+            <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
+                <div class="card-form">
+                    <h1>LOGIN</h1>
+                    <div class="textfield">
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <button class="btn-enviar">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
