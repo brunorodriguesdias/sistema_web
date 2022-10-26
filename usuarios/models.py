@@ -8,5 +8,5 @@ from django.core.exceptions import ValidationError
 class Usuario(models.Model):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE)
     cpf = models.CharField(max_length=11, unique=True)
-    telefone = models.CharField(max_length=11)
+    celular = models.CharField(max_length=11)
 
