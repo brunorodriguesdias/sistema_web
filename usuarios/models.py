@@ -1,9 +1,12 @@
+from enum import unique
+from tkinter import CASCADE
 from unittest.util import _MAX_LENGTH
-import uuid
-"""from django.db import models
+from django.db import models
+from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 
-class Users(models.Model):
-    nome = models.CharField(_MAX_LENGTH=30)
-    cpf = models.PositiveBigIntegerField(_MAX_LENGTH=11)
-    telefone
-"""
+class Usuario(models.Model):
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    cpf = models.CharField(max_length=11, unique=True)
+    telefone = models.CharField(max_length=11)
+
