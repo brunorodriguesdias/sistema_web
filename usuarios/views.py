@@ -11,6 +11,10 @@ def cadastro(request):
         
         if not nome.strip():
             return redirect('cadastro')
+        if not e_mail.strip():
+            return redirect('cadastro')
+        if not senha.strip():
+            return redirect('cadastro')
         if senha != confirma_senha:
             return redirect('cadastro')
         if User.objects.filter(email=e_mail).exists():
@@ -21,6 +25,8 @@ def cadastro(request):
         c_p_f = request.POST['cpf']
         telefone = request.POST['celular']
 
+        if not c_p_f.strip():
+            return redirect('cadastro')
         if Usuario.objects.filter(cpf=c_p_f).exists():
             return redirect('cadastro')
 
