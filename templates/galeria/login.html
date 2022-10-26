@@ -19,9 +19,9 @@
             <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
                 <div class="card-form">
                     <h1>LOGIN</h1>
-                    <div class="textfield">
+                    <div class="textfield" id="msg-email">
                         <label for="email">E-mail</label>
-                        <input type="text" name="email" placeholder="E-mail">
+                        <input type="text" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)" maxlenght="60">
                     </div>
                     <div class="textfield">
                         <label for="senha">Senha</label>
