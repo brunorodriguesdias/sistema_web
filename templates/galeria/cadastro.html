@@ -16,7 +16,7 @@
             <img src="{% static '/images/discount-animate.svg' %}" class= "left-form-image" alt="Promoção Animação">
         </div>
         <div class="right-form">
-            <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
+            <form name="form1" action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
                 <div class="card-form">
                     <h1>CADASTRO</h1>
                     <div class="textfield">
@@ -27,9 +27,9 @@
                         <label for="cpf">CPF</label>
                         <input type="text" name="cpf" placeholder="CPF">
                     </div>
-                    <div class="textfield">
+                    <div class="textfield" id="msg-email">
                         <label for="email">E-mail</label>
-                        <input type="text" name="email" placeholder="E-mail">
+                        <input type="text" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)" maxlenght="60">
                     </div>
                     <div class="textfield">
                         <label for="celular">Celular</label>
