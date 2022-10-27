@@ -44,7 +44,7 @@ def cadastro(request):
 
         usuario.save()
         usuario2.save()
-        
+        messages.info(request, 'Cadastro realizado com sucesso!')
         return redirect('login')
     return render(request, 'galeria/cadastro.html')
 

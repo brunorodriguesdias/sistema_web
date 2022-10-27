@@ -15,22 +15,22 @@
             <h1>Realize aqui o seu login</h1>
             <img src="{% static '/images/login-animate.svg' %}" class= "left-form-image" alt="Login Animação">
         </div>
-        <div class="right-form">
-            <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
-                <div class="card-form">
-                    <h1>LOGIN</h1>
-                    <div class="textfield" id="msg-email">
-                        <label for="email">E-mail</label>
-                        <input type="text" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)" maxlenght="60">
+        <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
+            <div class="right-form">
+                    <div class="card-form">
+                        <h1>LOGIN</h1>
+                        <div class="textfield" id="msg-email">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)" maxlenght="60">
+                        </div>
+                        <div class="textfield">
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" placeholder="Senha">
+                        </div>
+                        <button class="btn-enviar">Login</button>
                     </div>
-                    <div class="textfield">
-                        <label for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="Senha">
-                    </div>
-                    <button class="btn-enviar">Login</button>
-                </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </body>
 </html>
