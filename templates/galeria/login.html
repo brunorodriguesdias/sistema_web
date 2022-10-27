@@ -15,7 +15,7 @@
             <h1>Realize aqui o seu login</h1>
             <img src="{% static '/images/login-animate.svg' %}" class= "left-form-image" alt="Login Animação">
         </div>
-        <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
+        <form action="{% url 'login' %}" method="POST"> {% csrf_token %}
             <div class="right-form">
                     <div class="card-form">
                         <h1>LOGIN</h1>
@@ -28,8 +28,8 @@
                             <input type="password" name="senha" placeholder="Senha">
                         </div>
                         <button class="btn-entrar">Entrar</button>
-                        <a href="./cadastro.html">
-                            <button class="btn-cadastrar">Cadastre-se</button>
+                        <a href="{% url 'cadastro' %}">
+                            Cadastre-se
                         </a>
                     </div>
             </div>
