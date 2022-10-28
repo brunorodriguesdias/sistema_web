@@ -105,6 +105,10 @@
     box-shadow: 0px 10px 40px -12px #00ff8052;
 }
 
+.btn-entrar::hover {
+    background-color: #F0FFFFDE;
+}
+
 .btn-cadastrar {
     width: 100%;
     padding: 16px 0px;
@@ -119,6 +123,10 @@
     background-color: #00FF88;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+.btn-cadastrar::hover {
+    background-color: #F0FFFFDE;
 }
 
 @media only screen and (max-with: 950px) {
