@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from usuarios.models import Usuario
 from django.contrib import messages
+from django.contrib import auth
 
 def cadastro(request):
     if request.method == 'POST':
@@ -49,4 +50,22 @@ def cadastro(request):
     return render(request, 'galeria/cadastro.html')
 
 def login(request):
+    if request.method == 'POST':
+        e_mail = request.POST['email']
+        senha = request.POST['senha']
+        if User.objects.filter(email=e_mail).exists():
+            nome = User.objects.filter(email=e_mail).values_list('username', flat=True).get()
+            usuario = auth.authenticate(request, username=nome, password=senha)
+            if usuario is not None:
+                auth.login(request, usuario)
+                return redirect('dashboard')
+
+            else:
+                messages.info(request, 'Usuário e/ou senha incorretos, tente novamente!')
+                return redirect('login')
+        
     return render (request, 'galeria/login.html')
+
+
+def dashboard(request):
+    return render(request, 'galeria/dashboard.html')
