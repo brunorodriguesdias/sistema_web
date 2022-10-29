@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,32 +10,34 @@
     <title>Projeto em dupla</title>
     <link rel="stylesheet" type="text/css" href="{% static '/styles/style.css' %}">
 </head>
+
 <body>
     <div class="main-form">
         <div class="left-form">
             <h1>Realize aqui o seu cadastro<br>E participe da promoção</h1>
-            <img src="{% static '/images/discount-animate.svg' %}" class= "left-form-image" alt="Promoção Animação">
+            <img src="{% static '/images/discount-animate.svg' %}" class="left-form-image" alt="Promoção Animação">
         </div>
         <form name="form1" action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
             <div class="right-form">
-                    <div class="card-form">
-                        <h1>CADASTRO</h1>
-                        <div class="textfield">
-                            <label for="nome">Nome</label>
-                            <input type="text" name="nome" placeholder="Nome">
-                        </div>
-                        <div class="textfield">
-                            <label for="cpf">CPF</label>
-                            <input type="number" name="cpf" placeholder="CPF">
-                        </div>
-                        <div class="textfield" id="msg-email">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)" maxlenght="60">
-                        </div>
-                        <div class="textfield">
-                            <label for="celular">Celular</label>
-                            <input type="tel" name="celular" placeholder="Celular">
-                        </div>
+                <div class="card-form">
+                    <h1>CADASTRO</h1>
+                    <div class="textfield">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" placeholder="Nome">
+                    </div>
+                    <div class="textfield">
+                        <label for="cpf">CPF</label>
+                        <input type="number" name="cpf" placeholder="CPF">
+                    </div>
+                    <div class="textfield" id="msg-email">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)"
+                            maxlenght="60">
+                    </div>
+                    <div class="textfield">
+                        <label for="celular">Celular</label>
+                        <input type="tel" name="celular" placeholder="Celular">
+                    </div>
                     <!--<div class="textfield">
                             <label for="cep">CEP</label>
                             <input type="text" name="cep" placeholder="CEP">
@@ -63,23 +66,20 @@
                             <label for="estado">Estado</label>
                             <input type="text" name="cidade" placeholder="Estado">
                         </div>-->
-                        <div class="textfield">
-                            <label for="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Senha">
-                        </div>
-                        <div class="textfield">
-                            <label for="senha-confirme">Confirme sua senha</label>
-                            <input type="password" name="senha-confirme" placeholder="Confirme sua senha">
-                        </div>
-                        <button class="btn-cadastrar">Realizar cadastro</button>
-<<<<<<< HEAD
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
                     </div>
-                
-=======
-                    </div> 
->>>>>>> decaca61eacd671bc0a8e344b84e028bede469f7
+                    <div class="textfield">
+                        <label for="senha-confirme">Confirme sua senha</label>
+                        <input type="password" name="senha-confirme" placeholder="Confirme sua senha">
+                    </div>
+                    <button class="btn-cadastrar">Realizar cadastro</button>
+                </div>
             </div>
-        </form>
+        </div>
+    </form>
     </div>
 </body>
+
 </html>

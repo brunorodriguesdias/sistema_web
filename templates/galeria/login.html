@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,31 +10,34 @@
     <title>Projeto em dupla</title>
     <link rel="stylesheet" type="text/css" href="{% static '/styles/style.css' %}">
 </head>
+
 <body>
     <div class="main-form">
         <div class="left-form">
             <h1>Realize aqui o seu login</h1>
-            <img src="{% static '/images/login-animate.svg' %}" class= "left-form-image" alt="Login Animação">
+            <img src="{% static '/images/login-animate.svg' %}" class="left-form-image" alt="Login Animação">
         </div>
         <form action="{% url 'login' %}" method="POST"> {% csrf_token %}
             <div class="right-form">
-                    <div class="card-form">
-                        <h1>LOGIN</h1>
-                        <div class="textfield" id="msg-email">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)" maxlenght="60">
-                        </div>
-                        <div class="textfield">
-                            <label for="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Senha">
-                        </div>
-                        <button class="btn-entrar">Entrar</button>
-                        <a href="{% url 'cadastro' %}">
-                            Cadastre-se
-                        </a>
+                <div class="card-form">
+                    <h1>LOGIN</h1>
+                    <div class="textfield" id="msg-email">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="E-mail" onblur="validateEmail(form1.email)"
+                            maxlenght="60">
                     </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Senha">
+                    </div>
+                    <button class="btn-entrar">Entrar</button>
+                    <a href="{% url 'cadastro' %}">
+                        Cadastre-se
+                    </a>
+                </div>
             </div>
         </form>
     </div>
 </body>
+
 </html>
