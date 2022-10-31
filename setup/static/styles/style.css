@@ -129,6 +129,14 @@
     background-color: #F0FFFFDE;
 }
 
+.btn-zoom {
+    transition: transform 300ms;
+}
+
+.btn-zoom:hover {
+    transform: scale(1.1);
+}
+
 @media only screen and (max-with: 950px) {
     .card-form {
         width: 85%;
