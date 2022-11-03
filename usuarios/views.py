@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from usuarios.models import Usuario
 from django.contrib import messages
 from django.contrib import auth
+from validate_docbr import CPF
+
+cPf = CPF()
 
 def cadastro(request):
     if request.method == 'POST':
@@ -27,17 +30,20 @@ def cadastro(request):
             messages.info(request, 'E-mail já cadastrado!')
             return redirect('cadastro')
 
-        usuario = User.objects.create_user(username=nome, email=e_mail, password=senha)
-
         c_p_f = request.POST['cpf']
         telefone = request.POST['celular']
 
         if not c_p_f.strip():
             messages.info(request, 'CPF inválido, tente novamente!')
             return redirect('cadastro')
+        if cPf.validate(c_p_f) is False:
+            messages.info(request, 'CPF inválido, tente novamente!')
+            return redirect('cadastro')
         if Usuario.objects.filter(cpf=c_p_f).exists():
             messages.info(request, 'CPF já cadastrado!')
             return redirect('cadastro')
+
+        usuario = User.objects.create_user(username=nome, email=e_mail, password=senha)
 
         usuario2 = Usuario(cpf=c_p_f, celular=telefone)
 
