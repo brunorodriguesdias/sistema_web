@@ -74,4 +74,11 @@ def login(request):
 
 
 def dashboard(request):
-    return render(request, 'galeria/dashboard.html')
+    if request.user.is_authenticated:
+        return render(request, 'galeria/dashboard.html')
+    else:
+        return redirect('login')
+
+def logout(request):
+    auth.logout(request)
+    return render(request, 'galeria/login.html')
