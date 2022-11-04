@@ -15,32 +15,32 @@ def cadastro(request):
         confirma_senha = request.POST['senha-confirme']
         
         if not nome.strip():
-            messages.info(request, 'Nome inválido, tente novamente!')
+            messages.error(request, 'Nome inválido, tente novamente!')
             return redirect('cadastro')
         if not e_mail.strip():
-            messages.info(request, 'E-mail inválido, tente novamente!')
+            messages.error(request, 'E-mail inválido, tente novamente!')
             return redirect('cadastro')
         if not senha.strip():
-            messages.info(request, 'Senha inválida, tente novamente!')
+            messages.error(request, 'Senha inválida, tente novamente!')
             return redirect('cadastro')
         if senha != confirma_senha:
-            messages.info(request, 'Senhas divergentes, tente novamente')
+            messages.error(request, 'Senhas divergentes, tente novamente')
             return redirect('cadastro')
         if User.objects.filter(email=e_mail).exists():
-            messages.info(request, 'E-mail já cadastrado!')
+            messages.error(request, 'E-mail já cadastrado!')
             return redirect('cadastro')
 
         c_p_f = request.POST['cpf']
         telefone = request.POST['celular']
 
         if not c_p_f.strip():
-            messages.info(request, 'CPF inválido, tente novamente!')
+            messages.error(request, 'CPF inválido, tente novamente!')
             return redirect('cadastro')
         if cPf.validate(c_p_f) is False:
-            messages.info(request, 'CPF inválido, tente novamente!')
+            messages.error(request, 'CPF inválido, tente novamente!')
             return redirect('cadastro')
         if Usuario.objects.filter(cpf=c_p_f).exists():
-            messages.info(request, 'CPF já cadastrado!')
+            messages.error(request, 'CPF já cadastrado!')
             return redirect('cadastro')
 
         usuario = User.objects.create_user(username=nome, email=e_mail, password=senha)
@@ -51,7 +51,7 @@ def cadastro(request):
 
         usuario.save()
         usuario2.save()
-        messages.info(request, 'Cadastro realizado com sucesso!')
+        messages.success(request, 'Cadastro realizado com sucesso!')
         return redirect('login')
     return render(request, 'galeria/cadastro.html')
 
@@ -67,7 +67,7 @@ def login(request):
                 return redirect('dashboard')
 
             else:
-                messages.info(request, 'Usuário e/ou senha incorretos, tente novamente!')
+                messages.error(request, 'Usuário e/ou senha incorretos, tente novamente!')
                 return redirect('login')
         
     return render (request, 'galeria/login.html')

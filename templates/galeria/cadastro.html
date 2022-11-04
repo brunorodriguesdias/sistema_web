@@ -65,7 +65,9 @@
                         <div class="textfield estado">
                             <label for="estado">Estado</label>
                             <input type="text" name="cidade" placeholder="Estado">
-                        </div>-->
+                        </div>
+                        {% include 'galeria/partials/_alertas.html' %}
+                    -->
                     <div class="textfield">
                         <label for="senha">Senha</label>
                         <input type="password" name="senha" placeholder="Senha">
@@ -74,6 +76,7 @@
                         <label for="senha-confirme">Confirme sua senha</label>
                         <input type="password" name="senha-confirme" placeholder="Confirme sua senha">
                     </div>
+                    {% include 'galeria/partials/_alertas.html' %}
                     <button class="btn-cadastrar btn-zoom">Realizar cadastro</button>
                 </div>
             </div>
