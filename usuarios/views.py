@@ -52,33 +52,16 @@ def cadastro(request):
         usuario.save()
         usuario2.save()
         messages.success(request, 'Cadastro realizado com sucesso!')
-        return redirect('login')
+        return redirect('index')
     return render(request, 'galeria/cadastro.html')
-
-def login(request):
-    if request.method == 'POST':
-        e_mail = request.POST['email']
-        senha = request.POST['senha']
-        if User.objects.filter(email=e_mail).exists():
-            nome = User.objects.filter(email=e_mail).values_list('username', flat=True).get()
-            usuario = auth.authenticate(request, username=nome, password=senha)
-            if usuario is not None:
-                auth.login(request, usuario)
-                return redirect('dashboard')
-
-            else:
-                messages.error(request, 'Usuário e/ou senha incorretos, tente novamente!')
-                return redirect('login')
-        
-    return render (request, 'galeria/login.html')
 
 
 def dashboard(request):
     if request.user.is_authenticated:
         return render(request, 'galeria/dashboard.html')
     else:
-        return redirect('login')
+        return redirect('index')
 
 def logout(request):
     auth.logout(request)
-    return render(request, 'galeria/login.html')
+    return render(request, 'galeria/index.html')
