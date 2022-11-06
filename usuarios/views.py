@@ -65,3 +65,6 @@ def dashboard(request):
 def logout(request):
     auth.logout(request)
     return render(request, 'galeria/index.html')
+
+def receitas(request):
+    return render(request, 'galeria/receitas.html')
