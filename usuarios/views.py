@@ -66,8 +66,14 @@ def logout(request):
     auth.logout(request)
     return render(request, 'galeria/index.html')
 
-def receitas(request):
+def criar_receita(request):
     if request.user.is_authenticated:
-        return render(request, 'galeria/receitas.html')
+        return render(request, 'galeria/criar_receita.html')
+    else:
+        return redirect('index')
+
+def receita(request):
+    if request.user.is_authenticated:
+        return render(request, 'galeria/receita.html')
     else:
         return redirect('index')
