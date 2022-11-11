@@ -12,6 +12,7 @@ class Usuario(models.Model):
     celular = models.CharField(max_length=11)
 
 '''class Receita(models.Model):
+    usuario_criou = user
     nome_receita = models.CharField(max_length=100)
     ingredientes = models.TextField()
     modo_de_preparo = models.TextField()
