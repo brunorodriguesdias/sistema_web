@@ -66,7 +66,7 @@ def logout(request):
     auth.logout(request)
     return render(request, 'galeria/index.html')
 
-'''def criar_receita(request):
+def criar_receita(request):
     if request.user.is_authenticated:
         return render(request, 'galeria/criar_receita.html')
     else:
@@ -76,4 +76,4 @@ def receita(request):
     if request.user.is_authenticated:
         return render(request, 'galeria/receita.html')
     else:
-        return redirect('index')'''
+        return redirect('index')
