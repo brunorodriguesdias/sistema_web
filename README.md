@@ -11,11 +11,11 @@ No que diz respeito ao front end, Davi buscou ...<br>
 <h2>O projeto</h2>
 Neste projeto estamos desenvolvendo inicialmente um sistema de cadastro, aonde integramos front-end que utiliza HTML, CSS e Javascript,<br>
 com o back-end que utiliza Python e o framework Django, e também utilizamos o Mysql para criação do banco de dados e hospedamos utilizando o heroku<br>
-No planejamento deste sistema, projetamos 4 telas, inicial, login, cadastro e dashboard.<br>
-Até o momento trabalhamos em duas, login e cadastro,<br>
-Na tela de login, utilizamos autenticação do Django para fazer a consulta do cadastro do usuário e assim conceder acesso ao sistema.<br>
-Na tela de cadastro, criamos verificações para conferir os dados do usuário, veficação se as senhas estão iguais <br>
-E também impedimos a geração de CPF's e E-mails duplicados no banco de dados.<br>
+No planejamento deste sistema, projetamos a tela inicial que seria o login, cadastro e dashboard.<br>
+Na tela de login, utilizamos autenticação do Django para fazer a consulta do cadastro do usuário,<br>
+Verificando se os dados inseridos conferem com os dados que estão no banco de dados e assim conceder acesso ao sistema.<br>
+Na tela de cadastro, criamos verificações para conferir os dados do usuário, restringindo a duplicação de cpf e e-mail no banco, <br>
+Verificando se o cpf é válido, veficação se as senhas estão iguais <br>
 Neste projeto comecei a aprender como funciona o django, aprendi sobre views, models, a classe User,<br> 
 A função migrate que integra com o database e a criar e organizar apps e integrar os arquivos de front-end.
 
