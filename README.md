@@ -1,23 +1,26 @@
 <h1 align="center">Sistema Web</h1>
 
-<h2>🎯 Objetivo</h2>
-
 <h2>Bem vindo!</h2>
-Obrigado por conferir este projeto, nele estamamos desenvolvendo um sistema web integrando back e front end.<br>
-Na parte do back-end busquei começar meu aprendizado no framework django para intergrar com a parte de front-end<br>
-E ligar esse sistema com um banco de dados que fica hospedado na nuvem<br>
-No que diz respeito ao front end, Davi buscou ...<br>
 
-<h2>O projeto</h2>
-Neste projeto estamos desenvolvendo inicialmente um sistema de cadastro, aonde integramos front-end que utiliza HTML, CSS e Javascript,<br>
-com o back-end que utiliza Python e o framework Django, e também utilizamos o Mysql para criação do banco de dados e hospedamos utilizando o heroku<br>
-No planejamento deste sistema, projetamos a tela inicial que seria o login, cadastro e dashboard.<br>
-Na tela de login, utilizamos autenticação do Django para fazer a consulta do cadastro do usuário,<br>
-Verificando se os dados inseridos conferem com os dados que estão no banco de dados e assim conceder acesso ao sistema.<br>
-Na tela de cadastro, criamos verificações para conferir os dados do usuário, restringindo a duplicação de cpf e e-mail no banco, <br>
-Verificando se o cpf é válido, veficação se as senhas estão iguais <br>
-Neste projeto comecei a aprender como funciona o django, aprendi sobre views, models, a classe User,<br> 
-A função migrate que integra com o database e a criar e organizar apps e integrar os arquivos de front-end.
+<h2>🚀 Descrição</h2>
+
+<p> Neste projeto desenvolvemos um sistema de cadastro, integrando front-end (HTML, CSS e Javascript),
+com o back-end que utiliza Python e o framework Django. Como banco de dados, utilizamos o MySQL, com hospedagem no Heroku.
+</p>
+
+Projetamos 2 telas: inicial/login e cadastro. 
+- Na tela incial/login, utilizamos autenticação do Django para fazer a consulta do cadastro do usuário e assim conceder acesso ao sistema.
+- Na tela de cadastro, as seguintes atividades foram realizadas:
+  - Verificação dos dados do usuário;
+  - Confirmação da senha digitada;
+  - Impedimento da geração de CPFs e-mails duplicados no banco de dados.
+
+
+<h2>🎯 Objetivo do projeto</h2>
+<p><a href="https://github.com/brunorodriguesdias">Bruno Rodrigues Dias</a>: <br>Neste projeto comecei a aprender como funciona o Django, aprendi sobre views, models, a classe User, a função migrate que integra com o database e a criar e organizar apps e integrar os arquivos de front-end.</p>
+
+
+<p><a href="https://github.com/davikennedy">Davi Kennedy</a>: <br>Neste projeto tive a oportunidade de trabalhar com o Bruno, onde pude aprender sobre como funciona a integração do front-end com o back-end do Python. Aprendi um pouco mais sobre a utilização de divs, forms, efeitos de transition, shadow e hover, além dos conceitos de responsividade que pude colocar em prática.</p>
 
 
 <h2>🔧 Instalação</h2>
