@@ -32,10 +32,6 @@ Projetamos 2 telas: inicial/login e cadastro.
 python -m venv ./venv
 venv/Scripts/Activate
 pip install django python-dotenv mysqlclient validate_docbr
-
-```
-- Criar arquivo .env no diretório principal
-- Executar os seguintes comandos:
-```
+mkdir .env
 python manage.py runserver
 ```
