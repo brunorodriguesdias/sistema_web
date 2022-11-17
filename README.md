@@ -15,6 +15,7 @@ Projetamos 2 telas: inicial/login e cadastro.
   - Confirmação da senha digitada;
   - Impedimento da geração de CPFs e-mails duplicados no banco de dados.
 
+<img src="https://github.com/brunorodriguesdias/sistema_web/blob/master/Sistema_Web.gif">
 
 <h2>🎯 Objetivo do projeto</h2>
 <p><a href="https://github.com/brunorodriguesdias">Bruno Rodrigues Dias</a>: <br>Neste projeto comecei a aprender como funciona o Django, aprendi sobre views, models, a classe User, a função migrate que integra com o database e a criar e organizar apps e integrar os arquivos de front-end.</p>
